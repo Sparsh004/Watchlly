@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Watchlly
+- Create react app
+- configure tailwindcss
+- Header
+- Login Form
+- Sign-up Form 
+
+
+# Features of watchlly
+- Login/Sign up Page
+    - SignIn/SignUp form
+- Browse (after authentication)
+    - Header
+    - Main Movie
+        - Trailer in Background
+        - Title and Description
+        - Movie Suggestions
+            - Movie list * n (vertical scroll)
+- Watchlly GPT
+    - Search Bar
+    - Movie Suggestions
