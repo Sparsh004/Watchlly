@@ -74,8 +74,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Create react app
 - configure tailwindcss
 - Header
+- Routing 
 - Login Form
 - Sign-up Form 
+- Form Validation(useRef hooks)
+- Firebase Setup
+- Deploy using Firebase
+- Create sign up user account in firebase
+- Implement Sign-In using firebase
+- Created Redux store with UserSlice
+- 
 
 
 # Features of watchlly
