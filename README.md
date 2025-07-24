@@ -83,7 +83,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Create sign up user account in firebase
 - Implement Sign-In using firebase
 - Created Redux store with UserSlice
-- 
+- Bugfix: Sign-up user display name 
+- Bugfix: if user is not logged in redirect to login page 
+- Unsubscribed to the onAuthStateChanged callback
+- Add hardcoded values to the constant file
+- Register for tmdb api and get access token , go to documentation and get data from tmdb now playing api
 
 
 # Features of watchlly

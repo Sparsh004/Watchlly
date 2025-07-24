@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { Background,User_Avatar } from '../utils/constant';
+
 
 const Login = () => {
 
@@ -47,19 +49,19 @@ const Login = () => {
                 // Signed up 
                 const user = userCredential.user;
                 updateProfile(user, {
-                displayName: UserName, photoURL: "https://photos.fife.usercontent.google.com/pw/AP1GczNU-o9HGlvQJ13SYaGdfAOm-_d9dV13-so8U02YEjgbHp3IIfur-bwq=w346-h195-no?authuser=0"
+                displayName: UserName, photoURL: User_Avatar
                 }).then(() => {
                 
                     const {uid,email,displayName, photoURL} = auth.currentUser;
                     dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
-                navigate("/Browse")
+                
                 console.log(user);
                 }).catch((error) => {
                 // An error occurred
                 setErrorMessage(error);
                 });
                 // console.log(user);
-                navigate("/Browse");
+                
                 // ...
             })
             .catch((error) => {
@@ -72,13 +74,13 @@ const Login = () => {
         }
         else{
             // Sign-In Logic
-            const auth = getAuth();
+            const auth = getAuth(); 
             signInWithEmailAndPassword(auth, email.current.value, password.current.value)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
                 console.log(user);
-                navigate("/Browse");
+                
                 
                 // ...
             })
@@ -99,7 +101,7 @@ const Login = () => {
     <div>
       <Header/>
       <div className = "absolute"> 
-        <img src = "https://assets.nflxext.com/ffe/siteui/vlv3/7d2359a4-434f-4efa-9ff3-e9d38a8bde7f/web/IN-en-20250707-TRIFECTA-perspective_4faa9280-a2c5-4e07-aafc-a45ce43fea09_large.jpg" alt = "watchlly-background">
+        <img src = {Background} alt = "watchlly-background">
        </img>
       </div>
        <div  className = " absolute bg-black w-1/3 h-auto my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"> 
