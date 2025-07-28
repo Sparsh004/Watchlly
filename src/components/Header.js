@@ -5,6 +5,8 @@ import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import { addUser,removeUser } from '../utils/userSlice';
 import { Logo } from '../utils/constant';
+import { toggleGptSearchView } from '../utils/gptSlice';
+import Watchlly4 from "../utils/images/Watchlly.png";
 
 const Header = () => {
 
@@ -47,17 +49,26 @@ const Header = () => {
 
   },[]);
   
+  const handleGptSearchClick = ()=>{
+    // Toggle GPT Search Button
+    dispatch(toggleGptSearchView());
 
+
+  }
   return (
     <div className = " absolute px-6 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
      <img
-      className = "w-1/6 h-1/4"
-       src = {Logo}
-        
+      className = "w-1/6 h-1/4 "
+      src = {Logo} 
       alt = "netflix-logo"/>
        {user && (<div className = "flex items-center ">
-        <img className = "flex  w-12 px-2" alt= "userIcon" src={user?.photoURL}/>
-        <button onClick={handleSignOut} className = "bg-red-600 h-8 w-20 border-1 border-black">Sign Out</button>
+        <button  className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold py-2 px-6 m-4 rounded-full 
+                       hover:from-blue-500 hover:to-purple-500 transition-all duration-500 ease-in-out"
+                  onClick = {handleGptSearchClick}>
+          GPT Search
+        </button>
+        {/* <img className = "flex  w-12 px-2" alt= "userIcon" src={user?.photoURL}/> */}
+        <button onClick={handleSignOut} className = "bg-blue-300 rounded-full h-8 w-20 border-1 border-black">Sign Out</button>
       </div>)
 }
     </div>

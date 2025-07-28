@@ -1,0 +1,10 @@
+.hideBar{
+    scrollbar-width:none;
+}
+
+.Secondary{
+    background-color: #0A0F1C;
+    background: linear-gradient(135deg, #0A0F1C 0%, #1A2639 100%);
+
+
+}

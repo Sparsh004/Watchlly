@@ -88,6 +88,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Unsubscribed to the onAuthStateChanged callback
 - Add hardcoded values to the constant file
 - Register for tmdb api and get access token , go to documentation and get data from tmdb now playing api
+- custom hooks for nowPlayingMovies 
+- update store with movie data
+- create a movieSlice
+- update the store with movies data
+- Planning for mainContainer and secondaryContainer
+- Fetch trailer data from tmdb
+- update trailer data in store
+- Embedded the youtube video and make it autoplay and mute
+- Build secondaryComponent
+- Build Movie List
+- Build Movie Card
+- 
 
 
 # Features of watchlly

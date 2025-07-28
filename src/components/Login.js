@@ -8,6 +8,7 @@ import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { Background,User_Avatar } from '../utils/constant';
+import GptBackground from "../utils/images/GptBackground.png"
 
 
 const Login = () => {
@@ -100,7 +101,7 @@ const Login = () => {
   return (
     <div>
       <Header/>
-      <div className = "absolute"> 
+      <div className = "absolute "> 
         <img src = {Background} alt = "watchlly-background">
        </img>
       </div>
