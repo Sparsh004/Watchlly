@@ -56,7 +56,7 @@ const Login = () => {
                     const {uid,email,displayName, photoURL} = auth.currentUser;
                     dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
                 
-                console.log(user);
+             
                 }).catch((error) => {
                 // An error occurred
                 setErrorMessage(error);
@@ -80,7 +80,7 @@ const Login = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                console.log(user);
+                
                 
                 
                 // ...
@@ -113,7 +113,7 @@ const Login = () => {
             <input id="password-input" ref= {password} type="password" placeholder ="password" className = " flex justify-self-center p-3 m-4 w-3/4 bg-gray-700" />
             <p className = "text-red-400 p-2 m-2 font-bold">{ErrorMessage}</p>
 
-            <button onSubmit={(event)=>event.preventDefault()}  className = " flex mx-auto items-center justify-center p-4 m-4 bg-red-600 rounded-lg w-3/4 " onClick = {handleValidation}>
+            <button onSubmit={(event)=>event.preventDefault()}  className = " flex mx-auto items-center justify-center p-4 m-4 bg-blue-700 rounded-lg w-3/4 " onClick = {handleValidation}>
             {IsSignInForm? "Sign-In" : "Sign-Up"}</button>
 
             <p className = "p-2 m-2 hover:underline cursor-pointer" onClick = {toggleSignInForm}>{IsSignInForm? "New to Watchlly? Sign Up now and explore the world of Cinema":"Already a Watchlly Member? Sign-In Now"}</p>

@@ -99,6 +99,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Build secondaryComponent
 - Build Movie List
 - Build Movie Card
+- GPT Search Page
+- GPT Search Bar
+- (FEATURE) Multi-language support in GPT 
 - 
 
 
